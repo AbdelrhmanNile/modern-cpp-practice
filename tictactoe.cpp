@@ -43,7 +43,7 @@ public:
     return std::make_tuple(row, col);
   }
 
-  bool isEmpty(const int pos) {
+  bool isEmpty(const int &pos) {
     auto [row, col] = posToRowCol(pos);
     if (board[row][col] == ' ')
       return true;
@@ -51,7 +51,7 @@ public:
       return false;
   }
 
-  void play(const int pos, const char player) {
+  void play(const int &pos, const char &player) {
     auto [row, col] = posToRowCol(pos);
     board[row][col] = player;
   }
